@@ -10,9 +10,9 @@ Mac OS
 -------
 1. PHP installation
 
-    execute "php --version" on Terminal to check if it exist
-                            or
-    install with homebrew "brew install php"
+    execute "php --version" on Terminal to check if it exist\
+                            or\
+    install with homebrew "brew install php"\
 
 2. Composer installatin
 
