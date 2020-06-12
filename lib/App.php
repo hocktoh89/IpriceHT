@@ -18,12 +18,13 @@ class App
         $result = $stringHelper->convertUpperCase($name);
 
         $result2 = $stringHelper->convertUpperCaseOnOddIndex($name);
-
       
         echo $result;
         echo  "\n";
         echo $result2;
         echo  "\n";
+        
+        $result3 = $stringHelper->convertedStrToCsv($name);
 
     }
 }

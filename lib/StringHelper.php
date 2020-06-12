@@ -24,5 +24,22 @@ class StringHelper
         $resultArr = array_map($func, $wordArray, array_keys($wordArray));
         return join("",$resultArr);
     }
+
+    public function convertedStrToCsv(String $inputStr) {
+        $wordArray = str_split($inputStr);
+
+        try {
+
+            $file = fopen("./output.csv","w");
+            fputcsv($file, $wordArray);
+            fclose($file);
+
+            echo "CSV created!";
+            echo "\n";
+
+        } catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+    }
 }
 ?>
