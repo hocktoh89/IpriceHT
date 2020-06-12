@@ -5,7 +5,7 @@ Prerequisites
 2. composer
 
 
-=======
+-------
 Mac OS
 -------
 1. PHP installation
