@@ -16,7 +16,7 @@ Mac OS
 
 2. Composer installation
 
-Run the command below\
+Run the command below
 
     curl -sS https://getcomposer.org/installer | php
 
@@ -47,6 +47,6 @@ Start the Code
 --------------
 Unit Test
 --------------
-1. run\ 
+1. run\
     ./vendor/bin/phpunit --testdox test
 
