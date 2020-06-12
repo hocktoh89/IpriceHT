@@ -1,0 +1,14 @@
+{
+    "autoload": {
+      "psr-4": {
+        "IpriceHT\\": "lib/",
+        "App\\": "app/"
+      },
+      "classmap": [
+        "lib/"
+      ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2"
+    }
+}
