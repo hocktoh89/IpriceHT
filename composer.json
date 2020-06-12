@@ -1,11 +1,13 @@
 {
     "autoload": {
       "psr-4": {
-        "IpriceHT\\": "lib/",
-        "App\\": "app/"
+        "IpriceHT\\": "src/",
+        "App\\": "src/app/",
+        "Lib\\": "src/lib/"
       },
       "classmap": [
-        "lib/"
+        "src/lib/",
+        "src/app/"
       ]
     },
     "require-dev": {
