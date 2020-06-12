@@ -6,13 +6,8 @@ use IpriceHT\StringHelper;
 
 class App
 {
-    public function runCommand(array $argv)
+    public function runCommand($name)
     {
-        $name = "";
-        if (isset($argv[1])) {
-            $name = $argv[1];
-        }
-
         $stringHelper = new StringHelper();
 
         $result = $stringHelper->convertUpperCase($name);
@@ -21,9 +16,9 @@ class App
       
         echo $result;
         echo  "\n";
-        echo $result2;
+        fwrite(STDOUT, $result2);
         echo  "\n";
-        
+
         $result3 = $stringHelper->convertedStrToCsv($name);
 
     }
