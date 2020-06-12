@@ -22,13 +22,12 @@ class StringHelper
         };
         
         $resultArr = array_map($func, $wordArray, array_keys($wordArray));
-        return join("",$resultArr);
+        return join("", $resultArr);
     }
 
     public function convertedStrToCsv(String $inputStr) {
-        $wordArray = str_split($inputStr);
-
         try {
+            $wordArray = str_split($inputStr);
 
             $file = fopen("./output.csv","w");
             fputcsv($file, $wordArray);
@@ -38,7 +37,7 @@ class StringHelper
             echo "\n";
 
         } catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            echo '[Error during csv creation]: ',  $e->getMessage(), "\n";
         }
     }
 }
