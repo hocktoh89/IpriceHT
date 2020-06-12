@@ -14,6 +14,16 @@ final class StringHelperTest extends TestCase
         ];
     }
 
+    public function allOddIndexToUpperCaseDataProvider() {
+        return [
+            ['hello silly', 'hElLo sIlLy'],
+            ['heLlo mummy', 'hElLo mUmMy'],
+            ['heLlo dAddy', 'hElLo dAdDy'],
+            ["hello World", "hElLo wOrLd"],
+            ['heLlO babY', 'hElLo bAbY']
+        ];
+    }
+
     /**
      * @dataProvider allUpperCaseDataProvider
      */
@@ -22,6 +32,21 @@ final class StringHelperTest extends TestCase
         $stringHelper = new StringHelper();
 
         $result = $stringHelper->convertUpperCase($exampleStr);
+
+        $this->assertEquals(
+            $result,
+            $expectedStr
+        );
+    }
+
+    /**
+     * @dataProvider allOddIndexToUpperCaseDataProvider
+     */
+    public function testConvertStringOddIndexToUpperCase($exampleStr, $expectedStr ): void
+    {
+        $stringHelper = new StringHelper();
+
+        $result = $stringHelper->convertUpperCaseOnOddIndex($exampleStr);
 
         $this->assertEquals(
             $result,

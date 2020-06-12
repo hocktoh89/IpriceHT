@@ -8,7 +8,7 @@ class App
 {
     public function runCommand(array $argv)
     {
-        $name = "World";
+        $name = "";
         if (isset($argv[1])) {
             $name = $argv[1];
         }
@@ -17,9 +17,14 @@ class App
 
         $result = $stringHelper->convertUpperCase($name);
 
+        $result2 = $stringHelper->convertUpperCaseOnOddIndex($name);
+
+      
         echo $result;
         echo  "\n";
-        echo "Hello $name!!!\n";
+        echo $result2;
+        echo  "\n";
+
     }
 }
 ?>
